@@ -1,0 +1,41 @@
+﻿<Window x:Class="CA3_S00209014_Final.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CA3_S00209014_Final"
+        mc:Ignorable="d"
+        Title="Shift Nifty Car Rentals" Height="450" Width="700" Loaded="MainWindow_OnLoaded">
+    <Grid>
+        <Border BorderBrush="LightGray" BorderThickness="8"/>
+
+        <Canvas Margin="10" >
+
+            <!--Booking Details-->
+            <Label Content="Car Type" Canvas.Left="59" Canvas.Top="57" FontSize="13"/>
+            <ComboBox Name="cboxCarType" Canvas.Left="185" Canvas.Top="57" Width="120" SelectionChanged="cboxCarType_OnSelectionChanged"/>
+               
+            <Label Content="Start Date" Canvas.Left="59" Canvas.Top="91" FontSize="13"/>
+            <DatePicker Name="dtStartDate" Canvas.Left="185" Canvas.Top="91" Width="120"/>
+            <Label Name="dtEndtDate" Content="End Date" Canvas.Left="59" Canvas.Top="123" FontSize="13"/>
+            <DatePicker Canvas.Left="185" Canvas.Top="126" Width="120"/>
+            <Button Name="btnSearch" Content="Search" Canvas.Left="231" Canvas.Top="176" Width="74"/>
+
+
+            <!--Image-->
+            <Label Content="Shift Nifty Car Rentals" Canvas.Left="382" Canvas.Top="49" FontWeight="Bold" FontSize="20" FontFamily="Ink Free"/>
+            <Image Source="Resources/fusca.png" Height="162" Canvas.Left="382" Canvas.Top="84" Width="240"/>
+
+            <!--Available Cars-->
+            <Label Content="Available Cars" Canvas.Left="67" Canvas.Top="235" FontWeight="bold" FontSize="15"/>
+            <ListBox Name="lbxAvailableCars" Height="90" Canvas.Left="67" Canvas.Top="270" Width="238" SelectionChanged="lbxAvailableCars_OnSelectionChanged"/>
+
+            <!--Selected Car-->
+            <Label Content="Selected Car" Canvas.Left="382" Canvas.Top="235" FontWeight="bold" FontSize="15" RenderTransformOrigin="2.727,0.9"/>
+            <TextBlock  Name="xtblckSelectedCar" Height="90" Canvas.Left="382" Canvas.Top="270" Width="238"/>
+            <Button Name="btnBook" Content="Book" Canvas.Left="548" Canvas.Top="365" Width="74"/>
+
+        </Canvas>
+
+    </Grid>
+</Window>
